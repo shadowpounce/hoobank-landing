@@ -1,0 +1,55 @@
+.button {
+  @apply flex items-center justify-center origin-center;
+
+  font-family: 'Poppins';
+  font-weight: 500;
+  line-height: 130%;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .content {
+    z-index: 1;
+  }
+
+  &.primary {
+    padding: 20px 34px;
+    border-radius: 10px;
+
+    background: $button-gradient;
+    color: $bg;
+  }
+
+  &.circle {
+    width: 140px;
+    height: 140px;
+
+    border-radius: 50%;
+
+    background: $button-gradient;
+
+    position: relative;
+
+    @media (max-width: $md) {
+      width: 120px;
+      height: 120px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      right: 2px;
+      bottom: 2px;
+
+      border-radius: 50%;
+
+      background-color: $bg;
+
+      z-index: 0;
+    }
+  }
+}

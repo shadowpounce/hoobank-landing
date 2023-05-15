@@ -1,0 +1,59 @@
+.stats {
+  .container {
+    @apply flex items-center justify-between;
+
+    @media (max-width: $sm) {
+      @apply flex-col gap-14 justify-center;
+    }
+  }
+
+  .statistic {
+    @apply flex-1 flex items-center justify-center relative gap-5;
+
+    line-height: 130%;
+
+    @media (max-width: $md) {
+      @apply gap-2;
+      flex: unset;
+    }
+
+    @media (max-width: $sm) {
+      @apply flex-col gap-4;
+    }
+
+    .num {
+      font-weight: 600;
+      font-size: 40px;
+
+      @media (max-width: $md) {
+        font-size: 30px;
+      }
+    }
+
+    .value {
+      font-size: 20px;
+      text-transform: uppercase;
+
+      @media (max-width: $md) {
+        font-size: 16px;
+      }
+    }
+
+    @media (min-width: $md) {
+      &:not(:last-child) {
+        &::after {
+          content: '';
+          display: block;
+
+          position: absolute;
+          right: 0;
+
+          background-color: rgba(255, 255, 255, 0.6);
+
+          width: 1px;
+          height: 14px;
+        }
+      }
+    }
+  }
+}

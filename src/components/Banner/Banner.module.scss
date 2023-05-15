@@ -1,0 +1,10 @@
+.banner {
+  background: $bg-gradient;
+
+  border-radius: 20px;
+  padding: 70px 90px;
+
+  @media (max-width: $sm) {
+    padding: 30px;
+  }
+}

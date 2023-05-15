@@ -1,0 +1,106 @@
+.product {
+  div[class='container'] {
+    @apply flex items-center justify-between gap-40;
+
+    @media (max-width: $md) {
+      @apply flex-col;
+    }
+  }
+
+  div[class='gradient'] {
+    left: -50%;
+    top: -50%;
+    width: 75%;
+  }
+
+  .info {
+    width: 50%;
+
+    @media (max-width: $md) {
+      @apply w-full;
+    }
+
+    p {
+      @apply mt-6 mb-12;
+    }
+
+    div {
+      @apply flex items-center gap-8;
+
+      img {
+        height: 42px;
+        width: 140px;
+
+        object-fit: contain;
+      }
+    }
+  }
+
+  .frames {
+    width: 50%;
+    position: relative;
+
+    min-height: 455px;
+
+    @media (max-width: $md) {
+      @apply w-8/12;
+    }
+
+    @media (max-width: $sm) {
+      @apply w-full;
+    }
+
+    .frame {
+      position: absolute;
+      scale: 0.7;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &:first-child {
+        top: 0;
+        right: 0;
+
+        width: 250px;
+        height: 250px;
+
+        z-index: 1;
+
+        rotate: -45deg;
+      }
+
+      &:nth-child(2) {
+        left: 0;
+        bottom: 5%;
+
+        rotate: 45deg;
+      }
+
+      &:last-child {
+        background-color: #fff;
+        box-shadow: 0px 10px 30px rgba(40, 48, 63, 0.25);
+        border-radius: 10px;
+
+        padding: 15px 20px;
+
+        rotate: -45deg;
+
+        @apply flex items-center gap-2 mt-auto w-fit bottom-0 right-0;
+
+        .checkIcon {
+          width: 24px;
+          height: 24px;
+        }
+
+        p {
+          color: $bg;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}

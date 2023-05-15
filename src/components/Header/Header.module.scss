@@ -1,0 +1,38 @@
+.header {
+  padding: 30px 0 0;
+
+  .logo {
+    width: 118px;
+    height: 32px;
+
+    @media (max-width: $md) {
+      width: 100px;
+    }
+  }
+
+  .links {
+    @apply flex items-center gap-14;
+
+    @media (max-width: $md) {
+      @apply gap-4;
+    }
+
+    .link {
+      font-size: 16px;
+      line-height: 130%;
+      color: $smoke-white;
+
+      display: block;
+
+      transition: color 0.2s $ease-out-quad;
+
+      @media (max-width: $md) {
+        font-size: 10px;
+      }
+
+      &.active {
+        color: #fff;
+      }
+    }
+  }
+}

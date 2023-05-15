@@ -1,0 +1,29 @@
+.footerBanner {
+  .wrapper {
+    @apply flex items-center justify-between;
+
+    @media (max-width: $sm) {
+      @apply flex-col text-center;
+    }
+
+    .innerWrap {
+      @apply w-8/12;
+
+      @media (max-width: $sm) {
+        @apply w-full;
+      }
+
+      p {
+        @media (max-width: $sm) {
+          @apply w-full;
+        }
+      }
+    }
+
+    .bannerButton {
+      @media (max-width: $sm) {
+        @apply mt-6;
+      }
+    }
+  }
+}

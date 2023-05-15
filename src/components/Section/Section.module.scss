@@ -1,0 +1,13 @@
+.section {
+  @apply pt-40 relative;
+
+  @media (min-width: 1920px) {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $lg) {
+    @apply pt-20 relative;
+  }
+}

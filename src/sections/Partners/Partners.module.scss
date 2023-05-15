@@ -1,0 +1,11 @@
+.partners {
+  @apply pt-0;
+
+  div[class='container'] {
+    @apply flex items-center justify-between;
+
+    @media (max-width: $sm) {
+      @apply flex-wrap justify-center gap-6;
+    }
+  }
+}
